@@ -1,4 +1,4 @@
-const {languageAbreviations} =  require('./constants.js');
+import languageAbreviations from './constants.js';
 
 $(document).ready(function () {
     
