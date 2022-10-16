@@ -1,269 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Тетраедар</title>
-    
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
-    
-        <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
-    
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Lora:wght@600;700&display=swap" rel="stylesheet"> 
-    
-        <!-- Icon Font Stylesheet -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    
-        <!-- Libraries Stylesheet -->
-        <link href="../../lib/animate/animate.min.css" rel="stylesheet">
-        <link href="../../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
-    
-        <!-- Slick images css-->
-        <link rel="stylesheet" type="text/css" href="../../slick/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="../../slick/slick-theme.css"/>
-    
-        
-        <!-- Template Stylesheet -->
-        <link href="../../css/style.css" rel="stylesheet">
-    
-        <!--Image Viewer Magnify-->
-        <link href="../../magnify/dist/jquery.magnify.css" rel="stylesheet">
-    
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Тетраедър</title>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Lora:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Slick images css-->
+    <link rel="stylesheet" type="text/css" href="../../slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../../slick/slick-theme.css" />
+
+
+    <!-- Template Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+
+    <!--Image Viewer Magnify-->
+    <link href="../../magnify/dist/jquery.magnify.css" rel="stylesheet">
+
+</head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-info" role="status"></div>
     </div>
     <!-- Spinner End -->
 
-
     <!-- Navbar Start -->
     <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
-            <div class="col-lg-8 px-5 text-start">
-                <small><i class="fa fa-map-marker-alt me-2"></i> АПК Загоре, Стара Загора, България 6001</small>
-                <small class="ms-4"><i class="fa fa-envelope me-2"></i>info@tetraedar.com</small>
-                <small class="ms-4"><i class="fa fa-phone-alt me-2"></i>(+359) 887 31 0476</small>
-            </div>
-            <div class="col-lg-4 px-5 text-end">
-                <small>Последвайте ни:</small>
-                <a class="text-body ms-3" href=""><i class="fab fa-facebook-f"></i></a>
-            </div>
+        <div id="topNavBar">
+
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
             <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
                 <!-- <h1 class="fw-bold text-info m-0">Те<span class="text-muted">тра</span>едар</h1> -->
-                <img src="../../img/tetraedarHeadingLogo.png"  class="tetradarLogo" style="width: 400px;"/>
+                <img src="../../img/tetraedarHeadingLogo.png" class="tetradarLogo" style="width: 400px;" />
             </a>
-            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto p-4 p-lg-0">
-                        <a href="../index.html" class="nav-item nav-link active">Home</a>
-                        <a href="../about.html" class="nav-item nav-link">About us</a>
-                        <a href="../products.html" class="nav-item nav-link">Products</a>
-                        <a href="../contact.html" class="nav-item nav-link">Contacts</a>
-                        <a href="../../bg/products/product15.html" class="nav-item nav-link enIconMobileBarParrent"><img src="../../img/languages/en.ico" class="bgIconMobileBar"></a>
+                        <a href="index.html" class="nav-item nav-link active">Начало</a>
+                        <a href="about.html" class="nav-item nav-link">За нас</a>
+                        <a href="products.html" class="nav-item nav-link">Продукти</a>
+                        <a href="servicesPage.html" class="nav-item nav-link">Услуги</a>
+                        <a href="servicePage.html" class="nav-item nav-link">Монтаж</a>
+                        <a href="contact.html" class="nav-item nav-link">Контакти</a>
+                        <a href="../../en/products/product27.html" class="nav-item nav-link enIconMobileBarParrent"><img
+                                src="../../img/languages/en.ico" class="bgIconMobileBar"></a>
                     </div>
                 </div>
-                <!-- <div class="d-none d-lg-flex ms-2">
-                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
-                        <small class="fa fa-search text-body"></small>
-                    </a>
-                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
-                        <small class="fa fa-user text-body"></small>
-                    </a>
-                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
-                        <small class="fa fa-shopping-bag text-body"></small>
-                    </a>
-                </div> -->
             </div>
         </nav>
     </div>
     <!-- Navbar End -->
     <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
 
-    <div class="container py-5">
-        <div class="container">
-            <!-- <h1 class="display-3 mb-3 animated slideInDown text-center ">Тетраедър</h1> -->
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                        <img class="img-fluid"  
-                             style="width: 80%; height: 50%;" 
-                             src="../../img/photos/gun-cabinet/1.png"
-                             data-magnify="gallery"
-                             data-caption="Image Caption 1"
-                             data-src="../../img/photos/gun-cabinet/1.png">
-                    </div>
-                </div>
-                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="display-5 mb-4">Gun Cabinet</h1>
-                    <p class="mb-4">
-                        Шкафове за съхранение на оръжие и боеприпаси. Изпълняват се в следните варианти:
-Тип 5К за съхранение на 5бр пушки с вертикална преграда формираща пространство от 5 отделения за съхранение на боеприпаси и
-Тип 5КР който се различава от 5Р, че в горната си част има изградено допълнително отделение с отделен ключ за съхранение на късо оръжие.
-Тип F10HS е нов продукт за колекционери и притежатели на ценни оръжия. Огнеупорния шкаф пази Вашите скъпи оръжия, муниции, и аксесоари, докато документите, пари и други ценности се съхраняват във вградения V категория сейф тип B802. И на трите типа вратите за трислойни , подходящо оребрени и окомплектовани с касови брави с тристранно разположени заключващи щифтове. Предвидени са 2 отвора на гърба за анкериране.
-                    </p>
-              </div>
-            </div>
-            <div class="row align-items-center" style="padding-top: 7%;">
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
-                    <div class=" position-relative overflow-hidden p-5 pe-0">
-                        <div class="imagesSlider">
-                            <img src="../../img/photos/gun-cabinet/2.png" class="rounded img-fluid" data-magnify="gallery" data-caption="Image Caption 1" data-src="../../img/photos/gun-cabinet/2.png"alt="...">
-                            <img src="../../img/photos/gun-cabinet/4.png" class="rounded img-fluid" data-magnify="gallery" data-caption="Image Caption 1" data-src="../../img/photos/gun-cabinet/4.png"alt="...">
-                            <img src="../../img/photos/gun-cabinet/5.jpg" class="rounded img-fluid" data-magnify="gallery" data-caption="Image Caption 1" data-src="../../img/photos/gun-cabinet/5.jpg"alt="...">
-                            <img src="../../img/photos/gun-cabinet/3.png" class="rounded img-fluid" data-magnify="gallery" data-caption="Image Caption 1" data-src="../../img/photos/gun-cabinet/3.png"alt="...">
-                       
+        <div class="container py-5">
+            <div class="container">
+                <!-- <h1 class="display-3 mb-3 animated slideInDown text-center ">Тетраедър</h1> -->
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                            <img class="img-fluid" style="width: 80%; height: 50%;"
+                                src="../../img/photos/gun-cabinet/1.png" data-magnify="gallery"
+                                data-caption="Image Caption 1" data-src="../../img/photos/gun-cabinet/1.png">
                         </div>
                     </div>
+                    <div class="col-lg-5 wow fadeIn" data-wow-delay="0.5s">
+                        <h1 class="display-5 mb-4">Шкаф за оръжия</h1>
+                        <p class="mb-4">
+                            Шкафове за съхранение на оръжие и боеприпаси. Изпълняват се в следните варианти:
+                            Тип 5К за съхранение на 5бр пушки с вертикална преграда формираща пространство от 5
+                            отделения за съхранение на боеприпаси и
+                            Тип 5КР който се различава от 5Р, че в горната си част има изградено допълнително отделение
+                            с отделен ключ за съхранение на късо оръжие.
+                            Тип F10HS е нов продукт за колекционери и притежатели на ценни оръжия. Огнеупорния шкаф пази
+                            Вашите скъпи оръжия, муниции, и аксесоари, докато документите, пари и други ценности се
+                            съхраняват във вградения V категория сейф тип B802. И на трите типа вратите за трислойни ,
+                            подходящо оребрени и окомплектовани с касови брави с тристранно разположени заключващи
+                            щифтове. Предвидени са 2 отвора на гърба за анкериране.
+                        </p>
+                    </div>
                 </div>
-                 <div class="col-lg-8 wow fadeIn" data-wow-delay="0.5s">
+                <div class="row align-items-center" style="padding-top: 7%;">
+                    <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                        <div class=" position-relative overflow-hidden p-5 pe-0">
+                            <div class="imagesSlider">
+                                <img src="../../img/photos/gun-cabinet/2.png" class="rounded img-fluid"
+                                    data-magnify="gallery" data-caption="Image Caption 1"
+                                    data-src="../../img/photos/gun-cabinet/2.png" alt="...">
+                                <img src="../../img/photos/gun-cabinet/4.png" class="rounded img-fluid"
+                                    data-magnify="gallery" data-caption="Image Caption 1"
+                                    data-src="../../img/photos/gun-cabinet/4.png" alt="...">
+                                <img src="../../img/photos/gun-cabinet/5.jpg" class="rounded img-fluid"
+                                    data-magnify="gallery" data-caption="Image Caption 1"
+                                    data-src="../../img/photos/gun-cabinet/5.jpg" alt="...">
+                                <img src="../../img/photos/gun-cabinet/3.png" class="rounded img-fluid"
+                                    data-magnify="gallery" data-caption="Image Caption 1"
+                                    data-src="../../img/photos/gun-cabinet/3.png" alt="...">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 wow fadeIn" data-wow-delay="0.5s">
                         <table class="table table-hover text-center table-sm table-bordered">
-                                <tbody>
-                                    <tr class="thead">
-                                        <th></th>
-                                        <th colspan="5">Габаритни размери</th>
-                                        <th></th>
-                                    </tr>
-                                    <tr class="thead">
-                                        <th>Модел</th>
-                                        <th colspan="3">Външни</th>
-                                        <th>Ширина на преградата за боеприпаси</th>
-                                        <th>Височина на отделението за късо оръжие</th>
-                                        <th>Маса</th>
-                                    </tr>
-                                    <tr class="thead">
-                                        <th></th>
-                                        <th>H</th>
-                                        <th>B</th>
-                                        <th>L</th>
-                                        <th>b</th>
-                                        <th>h</th>
-                                        <th></th>
-                                    </tr>
-                                                            <tr>
-                                            <td>5P</td>
-                                            <td>1300</td>
-                                            <td>350</td>
-                                            <td>170</td>
-                                            <td>0</td>
-                                            <td>95</td>
-                                            <td></td>
-                                        </tr>
-                                                            <tr>
-                                            <td>5PK</td>
-                                            <td>1500</td>
-                                            <td>350</td>
-                                            <td>170</td>
-                                            <td>200</td>
-                                            <td>115</td>
-                                            <td></td>
-                                        </tr>
-                                                    </tbody>
-                            </table>
-                </div> 
+                            <tbody>
+                                <tr class="thead">
+                                    <th></th>
+                                    <th colspan="5">Габаритни размери</th>
+                                    <th></th>
+                                </tr>
+                                <tr class="thead">
+                                    <th>Модел</th>
+                                    <th colspan="3">Външни</th>
+                                    <th>Ширина на преградата за боеприпаси</th>
+                                    <th>Височина на отделението за късо оръжие</th>
+                                    <th>Маса</th>
+                                </tr>
+                                <tr class="thead">
+                                    <th></th>
+                                    <th>H</th>
+                                    <th>B</th>
+                                    <th>L</th>
+                                    <th>b</th>
+                                    <th>h</th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <td>5P</td>
+                                    <td>1300</td>
+                                    <td>350</td>
+                                    <td>170</td>
+                                    <td>0</td>
+                                    <td>95</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>5PK</td>
+                                    <td>1500</td>
+                                    <td>350</td>
+                                    <td>170</td>
+                                    <td>200</td>
+                                    <td>115</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="container">
-            <!-- <h1 class="display-3 mb-3 animated slideInDown text-center ">Тетраедър</h1> -->
-            
-        </div>
-    </div>
     </div>
     <!-- Firm Visit Start -->
-    <div class="container-fluid bg-info mt-5 py-6">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-md-7 wow fadeIn" data-wow-delay="0.1s">
-                    <h1 class="display-5 text-white mb-3">Посетете ни на място</h1>
-                    <p class="text-white mb-0">Предлагаме възможност на всеки клиент да посети на място, да изкоментираме, изберем материалите, както и да наблюдава процеса на изработка.</p>
-                </div>
-                <div class="col-md-5 text-md-end wow fadeIn" data-wow-delay="0.5s">
-                    <a class="text-info btn btn-lg btn-light rounded-pill py-3 px-5 "   href="">Посетете ни</a>
-                </div>
-            </div>
-        </div>
+    <div id="companyVisit">
     </div>
     <!-- Firm Visit End -->
 
-<!-- Partners Start -->
-<br> <br>
-<section>
-    <div class="container partnersSlider">
-         <img src="../../img/partners/unicredit.png" width="80%" alt="logo">
-         <img src="../../img/partners/dsk.png" width="80%" alt="logo">
-         <img src="../../img/partners/fibank.png" width="80%" alt="logo">
-         <img src="../../img/partners/obb.png" width="80%" alt="logo">
-         <img src="../../img/partners/reifeisen.png" width="80%" alt="logo">
-   </div>
-</section>
-<!-- Partners End -->
+    <br>
+    <br>
 
-<!-- Footer Start -->
-<div class="container-fluid bg-info footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="row g-5">
-            <div class="col-lg-3 col-md-6">
-                <h1 class="fw-bold text-light m-0">Те<span class="text-light">тра</span>едър</h1>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-light">
-                <h4 class="text-light mb-4">Адрес</h4>
-                <p><i class="fa fa-map-marker-alt me-3"></i>АПК Загоре, Стара Загора, България 6001</p>
-                <p><i class="fa fa-phone-alt me-3"></i>(+359) 887 31 0476</p>
-                <p><i class="fa fa-envelope me-3"></i>info@tetraedar.com</p>
-            </div>
-            <div class="col-lg-3 col-md-6 text-light">
-                <h4 class="text-light mb-4">Линкове</h4>
-                <a class="btn btn-link" href="bg/index.html">Начало</a>
-                <a class="btn btn-link" href="bg/about.html">За нас</a>
-                <a class="btn btn-link" href="bg/products.html">Продукти</a>
-                <a class="btn btn-link" href="bg/contact.html">Контакти</a>
-                <a class="btn btn-link" href="bg/contact#location.html">Локация</a>
-                <a class="btn btn-link" href="../../policy/politika-za-zashtita-na-ld.pdf" target="_blank">Политика за защита на данните</a>
-            </div>
-            <div class="col-lg-3 col-md-6 text-light">
-            <img src="../../img/tetraedatWhite.png" class="footerImage"/>
-            </div>
-    </div>
-    <div class="container-fluid copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-light text-md-start mb-3 mb-md-0">
-                    &copy; Tetraedar, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                </div>
-            </div>
+    <!-- Partners Start -->
+    <br> <br>
+    <section>
+        <div class="container partnersSlider">
+            <img src="../../img/partners/unicredit.png" width="80%" alt="logo">
+            <img src="../../img/partners/dsk.png" width="80%" alt="logo">
+            <img src="../../img/partners/fibank.png" width="80%" alt="logo">
+            <img src="../../img/partners/obb.png" width="80%" alt="logo">
+            <img src="../../img/partners/reifeisen.png" width="80%" alt="logo">
         </div>
-    </div>
-</div>
-<!-- Footer End -->
+    </section>
+    <!-- Partners End -->
+
+    <!-- Footer Start -->
+    <footer id="footer">
+    </footer>
+    <!-- Footer End -->
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-info btn-lg-square rounded-circle back-to-top text-light"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-info btn-lg-square rounded-circle back-to-top text-light"><i
+            class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -281,6 +227,7 @@
     <script src="../../js/main.js"></script>
     <script src="../../js/imagesSlider.js"></script>
     <script src="../../js/magnifyGallery.js"></script>
+    <script src="../../js/reusableComponents.js"></script>
 
 </body>
 

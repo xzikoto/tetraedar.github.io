@@ -5,29 +5,66 @@ var languageAbreviations = values.reduce((acc, value, i) => {
     return acc
 }, {})
 
+var parrentPathPrefix = '../'
+
 $(document).ready(function () {
-    
     LoadFooterByLanguage();
-    
+    LoadCompanyVisitComponent();
+    LoadSevicesVisitComponent();
+    LoadTopNavBarComponent();
+    LoadNavBarComponent();
+    LoadServiceTypesComponent();
 });
 
 
 function LoadFooterByLanguage() {
+    var fileName = location.href.split("/").slice(-2);
 
-    //getting parrentFolder
-    var fileName = location.href.split("/").slice(-2); 
-    // for(i=0; i<= languageAbreviations.length; i++){
-    //     if(fileName.first().contains(languageAbreviations.[i])){
-    //         $('#footer').load('../'+ languageAbreviations.values[i] +'footer.html');
-    //         return;
-    //     }
-    // }
-        for(const key in languageAbreviations) {
-            if(fileName[0].includes(languageAbreviations[key])){
-                $('#footer').load(languageAbreviations[key] +'footer.html');
+    for (const key in languageAbreviations) {
+        if (fileName[0].includes(languageAbreviations[key])) {
+            CheckFileExist('footer.html')
             return;
         }
-        }
+    }
+
+    CheckFileExist('footer.html')
+}
+
+function LoadCompanyVisitComponent() {
+    var companyVisitFileName = 'companyVisit.html'
+
+    CheckFileExist(companyVisitFileName)
+}
+
+function LoadSevicesVisitComponent() {
+    var servicesFileName = 'services.html'
     
-    // $('#footer').load('../'+ languageAbreviations.keys["bgLanguage"] +'footer.html');
-  }
+    CheckFileExist(servicesFileName);
+}
+
+function LoadTopNavBarComponent() {
+    var topNavBarFileName = 'topNavBar.html'
+
+    CheckFileExist(topNavBarFileName)
+}
+
+function LoadNavBarComponent() {
+    var navBarFileName = 'navBar.html'
+
+    CheckFileExist(navBarFileName)
+}
+
+function LoadServiceTypesComponent() {
+    var navBarFileName = 'serviceTypes.html'
+
+    CheckFileExist(navBarFileName)
+}
+
+function CheckFileExist(urlToFile) {
+    $.get(urlToFile)
+    .done(function() { 
+        $('#'+urlToFile.substring(0, urlToFile.lastIndexOf("."))).load(urlToFile)
+    }).fail(function() { 
+        $('#'+urlToFile.substring(0, urlToFile.lastIndexOf("."))).load(parrentPathPrefix + urlToFile)
+    })
+}
