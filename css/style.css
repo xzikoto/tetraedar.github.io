@@ -198,6 +198,10 @@
     .footerImage {
         width: 20%;
     }
+
+    .mainProductCategories {
+        margin-bottom: 10%;
+    }
 }
 
 .page-header {
