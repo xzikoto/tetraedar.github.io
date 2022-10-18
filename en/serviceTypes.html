@@ -1,6 +1,7 @@
-<div class="container-fluid bg-light my-5 py-6">
-    <div class="container">
-        <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+<div class="container-fluid bg-light my-5 py-6 serviceTypesBlock">
+    <div class="container servicesButtonsHover">
+        <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s"
+            style="max-width: 500px;">
             <h1 class="display-5 mb-3">Service</h1>
         </div>
         <div class="row g-4">
@@ -8,60 +9,100 @@
                 <div class="bg-white text-center h-100 p-4 p-xl-5">
                     <img class="img-fluid mb-4" src="../img/icon-3.png" alt="">
                     <h4 class="mb-3">Warranty and post-warranty service</h4>
-                    <p class="mb-4">Our company offers 5 (five) years full warranty on all products manufactured by us.</p>
-                    <p class="mb-4">Through the built-in service brochure in the country “Tetraedar-49” Ltd., it guarantees a quality and timely response to a problem of all warranty and post warranty products.</p>
-                    <p class="mb-4">“Tetraedar-49” Ltd. performs repair and servicing of all safes, vault doors and heavy banking equipment produced by other companies.Our company offers 5 (five) years full warranty on all products manufactured by us.</p>
-                    <a class="btn btn-outline-info border-2 py-2 px-4 rounded-pill" href="">Inquiry</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="bg-white text-center h-100 p-4 p-xl-5">
-                    <img class="img-fluid mb-4" src="../img/icon-2.png" alt="">
-                    <h4 class="mb-3">Installing locks</h4>
-                    <p class="mb-4">“Tetraedar-49” Ltd. offers delivery and installation of additional certified locks of leading manufacturers from Europe and USA. Besides installing locks, we also offer renovation of locking mechanisms for safes and vault doors, including the supply and installation of toughened glass, hardwood slabs and additional locks (RELOKER), thereby increasing the security of the safe or the vault door. All the above mentioned services are performed by highly qualified employees of the company that guarantee your anonymity.</p>
-                    <a class="btn btn-outline-info border-2 py-2 px-4 rounded-pill" href="">Inquiry</a>
+                    <p class="mb-4">Our company offers 5 (five) years full warranty on all products manufactured by us.
+                    </p>
+                    <p class="mb-4">Through the built-in service brochure in the country “Tetraedar-49” Ltd., it
+                        guarantees a quality and timely response to a problem of all warranty and post warranty
+                        products.</p>
+                    <p class="mb-4">“Tetraedar-49” Ltd. performs repair and servicing of all safes, vault doors and
+                        heavy banking equipment produced by other companies.Our company offers 5 (five) years full
+                        warranty on all products manufactured by us.</p>
+                    <a class="btn btn-outline-info border-2 py-2 px-4 rounded-pill requestButton"
+                        data-subject="Warranty and post-warranty service" onClick="return openModal();">Inquiry</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="bg-white text-center h-100 p-4 p-xl-5">
                     <img class="img-fluid mb-4" src="../img/icon-1.png" alt="">
                     <h4 class="mb-3">Recoding of mechanical and electronic code locks</h4>
-                    <p class="mb-4">If necessary, do not hesitate to contact our help or advice for making your mechanical or electronic code lock transcoded.
+                    <p class="mb-4">If necessary, do not hesitate to contact our help or advice for making your
+                        mechanical or electronic code lock transcoded.
                         For your convenience, use the published instructions or contact us</p>
-                        <p><i class="fa fa-check text-info me-3"></i><a href="../instructions/Rakovodstvo-La-Gard-MKB3.pdf" target="_blank">Ръководство La Gard МКБ3 </a></p>
-                        <p><i class="fa fa-check text-info me-3"></i><a href="../instructions/Rakovodstvo-La-Gard-MKB4.pdf" target="_blank">Ръководство La Gard МКБ3 </a></p>
-                        <p><i class="fa fa-check text-info me-3"></i><a href="../instructions/RE1-na-EKB-BG-STUV.pdf" target="_blank">РЕ на ЕКБ BG STUV</a></p>
-                        <p><i class="fa fa-check text-info me-3"></i><a href="../instructions/RE-vremeva-brava-LEBTIG-GmbH.pdf" target="_blank">РЕ времева брава ЛЕБТИГ</a></p>
-                        <p><i class="fa fa-check text-info me-3"></i><a href="../instructions/RE-Code-Combi-B-82132.pdf" target="_blank">RE Code Combi B MAUER</a></p>
-                        <p><i class="fa fa-check text-info me-3"></i><a href="../instructions/LG_39E_Multi_User_bg.pdf" target="_blank">LG 39E Multi User</a></p>
-                        <p><i class="fa fa-check text-info me-3"></i> <a href="../instructions/RE-DS-2.pdf" target="_blank">RE DS 2</a></p>
-                    <a class="btn btn-outline-info border-2 py-2 px-4 rounded-pill" href="">Inquiry</a>
+                    <p><i class="fa fa-check text-info me-3"></i><a href="../instructions/Rakovodstvo-La-Gard-MKB3.pdf"
+                            target="_blank">Ръководство La Gard МКБ3 </a></p>
+                    <p><i class="fa fa-check text-info me-3"></i><a href="../instructions/Rakovodstvo-La-Gard-MKB4.pdf"
+                            target="_blank">Ръководство La Gard МКБ3 </a></p>
+                    <p><i class="fa fa-check text-info me-3"></i><a href="../instructions/RE1-na-EKB-BG-STUV.pdf"
+                            target="_blank">РЕ на ЕКБ BG STUV</a></p>
+                    <p><i class="fa fa-check text-info me-3"></i><a
+                            href="../instructions/RE-vremeva-brava-LEBTIG-GmbH.pdf" target="_blank">РЕ времева брава
+                            ЛЕБТИГ</a></p>
+                    <p><i class="fa fa-check text-info me-3"></i><a href="../instructions/RE-Code-Combi-B-82132.pdf"
+                            target="_blank">RE Code Combi B MAUER</a></p>
+                    <p><i class="fa fa-check text-info me-3"></i><a href="../instructions/LG_39E_Multi_User_bg.pdf"
+                            target="_blank">LG 39E Multi User</a></p>
+                    <p><i class="fa fa-check text-info me-3"></i> <a href="../instructions/RE-DS-2.pdf"
+                            target="_blank">RE DS 2</a></p>
+                    <a class="btn btn-outline-info border-2 py-2 px-4 rounded-pill requestButton"
+                        data-subject="Recoding of mechanical and electronic code locks" onClick="return openModal();">Inquiry</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="bg-white text-center h-100 p-4 p-xl-5">
+                    <img class="img-fluid mb-4" src="../img/icon-2.png" alt="">
+                    <h4 class="mb-3">Installing locks</h4>
+                    <p class="mb-4">“Tetraedar-49” Ltd. offers delivery and installation of additional certified locks
+                        of leading manufacturers from Europe and USA. Besides installing locks, we also offer renovation
+                        of locking mechanisms for safes and vault doors, including the supply and installation of
+                        toughened glass, hardwood slabs and additional locks (RELOKER), thereby increasing the security
+                        of the safe or the vault door. All the above mentioned services are performed by highly
+                        qualified employees of the company that guarantee your anonymity.</p>
+                    <a class="btn btn-outline-info border-2 py-2 px-4 rounded-pill requestButton"
+                        data-subject="Installing locks" onClick="return openModal();">Inquiry</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="bg-white text-center h-100 p-4 p-xl-5">
                     <img class="img-fluid mb-4" src="../img/icon-1.png" alt="">
                     <h4 class="mb-3">Prophylaxis of locking systems</h4>
-                    <p class="mb-4">In case of interest and request from the client “Tetraedar-49” Ltd., offers periodic subscription prevention of locking mechanisms and locks of safes and vault doors. This ensures long-lasting and trouble-free operation of your locking systems.</p>
-                    <a class="btn btn-outline-info border-2 py-2 px-4 rounded-pill" href="">Inquiry</a>
+                    <p class="mb-4">In case of interest and request from the client “Tetraedar-49” Ltd., offers periodic
+                        subscription prevention of locking mechanisms and locks of safes and vault doors. This ensures
+                        long-lasting and trouble-free operation of your locking systems.</p>
+                    <a class="btn btn-outline-info border-2 py-2 px-4 rounded-pill requestButton"
+                        data-subject="Prophylaxis of locking systems" onClick="return openModal();">Inquiry</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="bg-white text-center h-100 p-4 p-xl-5">
                     <img class="img-fluid mb-4" src="../img/icon-1.png" alt="">
-                    <h4 class="mb-3">Консултация</h4>
-                    <p class="mb-4">Our competent advice and advice is at your disposal prior to choosing and purchasing a safe. Of course, you can rely on them even afterwards.</p>
-                    <p class="mb-4">Unfortunately, the current market is overwhelmed by cheap safes that do not provide the necessary reliable protection of your valuables money and documents. Outside, these safes can look pretty solid and massive, but when removing the rear door panel, you can see unreliable materials, mechanisms, and locks that are used to make them. These “safes” can literally be opened within minutes of low-skilled criminals using nothing more than a pair of ordinary tools. Owning such a safe is not a guarantee of your security, as the criminal is maximally facilitated with an easy-to-open “box”. Buying a safe is not only a matter of trust but also a long-term investment. Therefore, comprehensive prior consultation on existing options is not only your full right but also a necessary necessity.</p>
-                    <a class="btn btn-outline-info border-2 py-2 px-4 rounded-pill" href="">Inquiry</a>
+                    <h4 class="mb-3">Consultation</h4>
+                    <p class="mb-4">Our competent advice and advice is at your disposal prior to choosing and purchasing
+                        a safe. Of course, you can rely on them even afterwards.</p>
+                    <p class="mb-4">Unfortunately, the current market is overwhelmed by cheap safes that do not provide
+                        the necessary reliable protection of your valuables money and documents. Outside, these safes
+                        can look pretty solid and massive, but when removing the rear door panel, you can see unreliable
+                        materials, mechanisms, and locks that are used to make them. These “safes” can literally be
+                        opened within minutes of low-skilled criminals using nothing more than a pair of ordinary tools.
+                        Owning such a safe is not a guarantee of your security, as the criminal is maximally facilitated
+                        with an easy-to-open “box”. Buying a safe is not only a matter of trust but also a long-term
+                        investment. Therefore, comprehensive prior consultation on existing options is not only your
+                        full right but also a necessary necessity.</p>
+                    <a class="btn btn-outline-info border-2 py-2 px-4 rounded-pill requestButton"
+                        data-subject="Consultation" onClick="return openModal();">Inquiry</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="bg-white text-center h-100 p-4 p-xl-5">
                     <img class="img-fluid mb-4" src="../img/icon-1.png" alt="">
                     <h4 class="mb-3">Emergency opening</h4>
-                    <p class="mb-4">In case of technical problems related to your safe, vault or weapon cabinet, our support team is ready to assist you. Our professional technical staff is well acquainted with the implementation of locking systems not only of Tetraedar-49 Ltd products, but also of products of other companies.
-                        If you lose your key or have forgotten the digital combination, our specialists will take care to access your valuables, money, documents or weapons as soon as possible.</p>
-                    <a class="btn btn-outline-info border-2 py-2 px-4 rounded-pill" href="">Inquiry</a>
+                    <p class="mb-4">In case of technical problems related to your safe, vault or weapon cabinet, our
+                        support team is ready to assist you. Our professional technical staff is well acquainted with
+                        the implementation of locking systems not only of Tetraedar-49 Ltd products, but also of
+                        products of other companies.
+                        If you lose your key or have forgotten the digital combination, our specialists will take care
+                        to access your valuables, money, documents or weapons as soon as possible.</p>
+                    <a class="btn btn-outline-info border-2 py-2 px-4 rounded-pill requestButton"
+                        data-subject="Emergency opening" onClick="return openModal();">Inquiry</a>
                 </div>
             </div>
         </div>
