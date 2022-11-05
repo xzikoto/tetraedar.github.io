@@ -149,11 +149,11 @@
      <!-- Partners Start -->
     <section>
         <div class="container partnersSlider">
-            <img src="../img/partners/unicredit.png" width="18%" alt="logo">
-            <img src="../img/partners/dsk.png" width="18%" alt="logo">
-            <img src="../img/partners/fibank.png" width="18%" alt="logo">
-            <img src="../img/partners/obb.png" width="18%" alt="logo">
-            <img src="../img/partners/reifeisen.png" width="18%" alt="logo">
+            <img src="../img/partners/unicredit.png" alt="logo">
+            <img src="../img/partners/dsk.png" alt="logo">
+            <img src="../img/partners/fibank.png"  alt="logo">
+            <img src="../img/partners/obb.png"  alt="logo">
+            <img src="../img/partners/reifeisen.png" alt="logo">
         </div>
     </section>
      <!-- Partners End -->
@@ -220,27 +220,33 @@
     <script src="../js/imagesSlider.js"></script>
     <script src="../js/reusableComponents.js"></script>
     <script type="text/javascript">
-        function openModal(){
-            var button =  $('.requestButton');
-            var subject = button.data('subject');
-
+        function openModal(el){
+            var subject = $(el).data('subject');
+  
             var modal =  $('#exampleModal');
             modal.find('#recipient-subject').val(subject)
             modal.modal('show');
         }
-
+  
         function successEmail() {
             $('#toastNotification').show();
         }
-
+  
         $(".close").click(function () {
+          
+          var modal =  $('#exampleModal');
             $('#exampleModal').modal('hide');
+            modal.find('#recipient-subject').val(" ");
+            modal.find('#recipient-name').val(" ");
+            modal.find('#recipient-email').val(" ");
+            modal.find('#recipient-phone').val(" ");
+            modal.find('#message-text').val(" ");
         });
-
+  
         $(window).click(function () {
             $('#toastNotification').show();
         });
-</script>
+  </script>
 </body>
 
 </html>

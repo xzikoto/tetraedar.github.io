@@ -112,7 +112,9 @@
                         Type 5P can hold up to 5 rifles/shotguns with a vertical section holding 5 ammunition compartments
                         Type 5PK which has an additional compartment with a separate lock for storing handguns. Type F10HS is a new fireproof cabinet for collectors and avid sportsmen. The fireproof cabinet protects all valuable weapons, ammo and accessories, while the built-in high-security category V B802 protects money, documents and valuables.
                         All types have triple layer doors, with suitable ribs and safe locks with three side locking bolts. Two openings are designed for anchoring.</p>
-                </div>
+                        <a class="btn btn-info text-light rounded-pill py-3 px-5 mt-3"
+                        data-subject="Gun Cabinet" onClick="openModal(this);">Inquiry</a>
+                    </div>
             </div>
             <div class="row align-items-center" style="padding-top: 7%;">
                 <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
@@ -210,7 +212,44 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-info btn-lg-square rounded-circle back-to-top text-light"><i class="bi bi-arrow-up"></i></a>
-
+    <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Send us a request regarding this service and we will contact you.</h5>
+            </div>
+            <div class="modal-body">
+            <form id="my-form" action="https://formspree.io/f/mrgdapko" method="POST">
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Name:</label>
+                  <input type="text" class="form-control" id="recipient-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="recipient-email" class="col-form-label">Email:</label>
+                    <input type="email" class="form-control" id="recipient-email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="recipient-subject" class="col-form-label">Subject:</label>
+                    <input type="text" class="form-control" id="recipient-subject" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="recipient-phone" class="col-form-label">Phone:</label>
+                    <input type="tel" class="form-control" id="recipient-phone" required>
+                  </div>
+                <div class="form-group">
+                  <label for="message-text" class="col-form-label">Message:</label>
+                  <textarea class="form-control" id="message-text" required></textarea>
+                </div>
+                <br> 
+                <div class="modal-footer">
+              <button type="button" class="btn btn-secondary close" onclick="return successEmail();" data-dismiss="modal">Close</button>
+              <button id="my-form-button"class="btn btn-info text-light send">Send message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -228,7 +267,35 @@
     <script src="../../js/imagesSlider.js"></script>
     <script src="../../js/magnifyGallery.js"></script>
     <script src="../../js/reusableComponents.js"></script>
-
+    <script type="text/javascript" src="../js/emailExternalClientSender.js"></script>
+    <script type="text/javascript">
+        function openModal(el){
+            var subject = $(el).data('subject');
+  
+            var modal =  $('#exampleModal');
+            modal.find('#recipient-subject').val(subject)
+            modal.modal('show');
+        }
+  
+        function successEmail() {
+            $('#toastNotification').show();
+        }
+  
+        $(".close").click(function () {
+          
+          var modal =  $('#exampleModal');
+            $('#exampleModal').modal('hide');
+            modal.find('#recipient-subject').val(" ");
+            modal.find('#recipient-name').val(" ");
+            modal.find('#recipient-email').val(" ");
+            modal.find('#recipient-phone').val(" ");
+            modal.find('#message-text').val(" ");
+        });
+  
+        $(window).click(function () {
+            $('#toastNotification').show();
+        });
+  </script>
 
 </body>
 
