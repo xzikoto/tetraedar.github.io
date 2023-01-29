@@ -102,34 +102,34 @@
                 </div>
             </div>
             <div class="col-lg-7 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                <form class="gform" data-email="info@tetraedar.com" method="POST"
-                    action="https://script.google.com/macros/s/AKfycbygEPVOPYRowb96P5q4htI7KfHmSPnhl7RfO9Edtpd92L50PMsyCKEgZmJM4vG1v14i/exec">
+                <form action="https://formspree.io/f/mbjedyjb" method="POST" >
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
-                                <label for="name">Вашето име</label>
+                                <input type="text" name="name" class="form-control"
+                                    placeholder="Your Name" id="recipient-name">
+                                <label for="name">Your name</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="email" name="email" class="form-control" id="email"
-                                    placeholder="Your Email">
-                                <label for="email">Вашият Email</label>
+                                <input type="email" name="email" class="form-control"
+                                    placeholder="Your Email" id="recipient-email">
+                                <label for="email">Your Email</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <input type="text" name="subject" class="form-control" id="subject"
+                                <input type="text" name="subject" class="form-control" id="recipient-subject"
                                     placeholder="Subject">
-                                <label for="subject">Тема</label>
+                                <label for="subject">Subject</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
                                 <textarea class="form-control" name="message" placeholder="Leave a message here"
-                                    id="message" style="height: 200px"></textarea>
-                                <label for="message">Съобщение</label>
+                                id="message-text" style="height: 200px"></textarea>
+                                <label for="message">Message</label>
                             </div>
                         </div>
                         <div class="col-12">
@@ -189,7 +189,7 @@
     <script src="../js/main.js"></script>
     <script src="../js/imagesSlider.js"></script>
     <script src="../js/reusableComponents.js"></script>
-
+    <script type="text/javascript" src="../js/emailExternalClientSender.js"></script>
 
 </body>
 
