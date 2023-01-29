@@ -190,6 +190,10 @@
         min-height: 450px;
     }
     
+    #indexParagraph {
+        visibility: hidden;
+    }
+
     #header-carousel .carousel-item img {
         position: absolute;
         width: 100%;

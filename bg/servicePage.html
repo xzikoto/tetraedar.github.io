@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPTYK0DMW2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RPTYK0DMW2');
+    </script>
+    <link rel="icon" href="../img/tetraedar.png" type="image/icon type">
     <meta charset="utf-8">
     <title>Тетраедър</title>
 
@@ -127,7 +137,7 @@
                       <h5 class="modal-title" id="exampleModalLabel">Изпратете ни запитване и ние ще се свържем с вас.</h5>
                     </div>
                     <div class="modal-body">
-                    <form id="my-form" action="https://formspree.io/f/mrgdapko" method="POST">
+                      <form id="my-form" action="https://formspree.io/f/mrgdapko" method="POST">
                         <div class="form-group">
                           <label for="recipient-name" class="col-form-label">Име:</label>
                           <input type="text" class="form-control" id="recipient-name" required>
@@ -137,7 +147,7 @@
                             <input type="email" class="form-control" id="recipient-email" required>
                           </div>
                           <div class="form-group">
-                            <label for="recipient-subject" class="col-form-label">Тема:</label>
+                            <label for="recipient-subject" class="col-form-label">Относно:</label>
                             <input type="text" class="form-control" id="recipient-subject" required>
                           </div>
                           <div class="form-group">
@@ -150,7 +160,7 @@
                         </div>
                         <br> 
                         <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary close" onclick="return successEmail();" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-secondary close" onclick="return successEmail();" data-dismiss="modal">Затвори</button>
                       <button id="my-form-button"class="btn btn-info text-light send">Изпрати запитване</button>
                         </div>
                       </form>
@@ -172,33 +182,69 @@
     <script src="../js/main.js"></script>
     <script src="../js/imagesSlider.js"></script>
     <script src="../js/reusableComponents.js"></script>
+    <script type="text/javascript" src="../js/emailExternalClientSender.js"></script>
     <script type="text/javascript">
-        function openModal(el){
-            var subject = $(el).data('subject');
-
-            var modal =  $('#exampleModal');
-            modal.find('#recipient-subject').val(subject)
-            modal.modal('show');
-        }
-
-        function successEmail() {
-            $('#toastNotification').show();
-        }
-
-        $(".close").click(function () {
-          
+      function openModal(el){
+          var subject = $(el).data('subject');
           var modal =  $('#exampleModal');
-            $('#exampleModal').modal('hide');
-            modal.find('#recipient-subject').val(" ");
-            modal.find('#recipient-name').val(" ");
-            modal.find('#recipient-email').val(" ");
-            modal.find('#recipient-phone').val(" ");
-            modal.find('#message-text').val(" ");
-        });
 
-        $(window).click(function () {
-            $('#toastNotification').show();
-        });
+          clearModal();
+          modal.find('#recipient-subject').val(subject)
+          modal.modal('show');
+      }
+
+      function successEmail() {
+          $('#toastNotification').show();
+      }
+
+      $(".close").click(function () {
+        clearModal();
+      });
+
+      $(window).click(function () {
+          $('#toastNotification').show();
+      });
+
+      function clearModal(el){
+        var modal =  $('#exampleModal');
+          $('#exampleModal').modal('hide');
+          modal.find('#recipient-subject').val(" ");
+          modal.find('#recipient-name').val(" ");
+          modal.find('#recipient-email').val(" ");
+          modal.find('#recipient-phone').val(" ");
+          modal.find('#message-text').val(" ");
+      }
+
+      var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
 </script>
 </body>
 
